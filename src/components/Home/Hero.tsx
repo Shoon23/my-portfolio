@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -66,6 +67,77 @@ const Hero = () => {
           >
             <a href="#contacts">Contact Me</a>
           </motion.button>
+          <div className="flex items-center flex-wrap gap-4">
+            <motion.a
+              animate={{
+                opacity: 1,
+              }}
+              initial={{
+                opacity: 0,
+              }}
+              transition={{
+                delay: 0.8,
+
+                ease: "easeInOut",
+              }}
+              href="mailto:seanwilfredcustodio@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaEnvelope size={24} />
+            </motion.a>
+            <motion.a
+              animate={{
+                opacity: 1,
+              }}
+              initial={{
+                opacity: 0,
+              }}
+              transition={{
+                delay: 1,
+                ease: "easeInOut",
+              }}
+              href="https://github.com/Shoon23"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={24} />
+            </motion.a>
+            <motion.a
+              animate={{
+                opacity: 1,
+              }}
+              initial={{
+                opacity: 0,
+              }}
+              transition={{
+                delay: 1.2,
+                ease: "easeInOut",
+              }}
+              href="https://www.linkedin.com/in/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={24} />
+            </motion.a>
+            <motion.a
+              animate={{
+                opacity: 1,
+              }}
+              initial={{
+                opacity: 0,
+              }}
+              transition={{
+                delay: 1.2,
+                ease: "easeInOut",
+              }}
+              href="https://www.fiverr.com/kittywebdev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/fiverr3.png" alt="Fiverr" width={24} height={24} />
+            </motion.a>
+          </div>
         </div>
         <motion.div
           animate={{
