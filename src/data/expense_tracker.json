@@ -1,0 +1,165 @@
+{
+  "name": "Expense Tracker",
+  "overview": "The Expense Tracker application provides a comprehensive solution for tracking expenses, managing budgets, and categorizing expenses. It leverages the mentioned tech stack to deliver an efficient and user-friendly experience for managing personal finances",
+  "img": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842779/md/expense_tracker/line%20chart.png",
+  "site": "",
+  "github": "https://github.com/Shoon23/expense-tracker",
+  "techStack": [
+    "Typescript",
+    "React",
+    "Reactquery",
+    "Node.js",
+    "Express.js",
+    "Prisma",
+    "Postgresql",
+    "Webpack"
+  ],
+  "features": [
+    {
+      "title": "User Authentication",
+      "items": [
+        {
+          "title": "Register",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842158/md/expense_tracker/register.png",
+          "description": "Users can create a new account by providing their necessary information, such as username, email, and password. The registration process securely stores their credentials for future login."
+        },
+        {
+          "title": "Login",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842158/md/expense_tracker/login.png",
+          "description": "Registered users can log into the application using their credentials. Upon successful authentication, they gain access to their personalized dashboard and can start managing their expenses, budgets, and categories."
+        }
+      ]
+    },
+    {
+      "title": "DashBoard Page",
+      "items": [
+        {
+          "title": "Line Chart And Card",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842779/md/expense_tracker/line%20chart.png",
+          "description": "The Line Chart visually represents the user's expense data over time. It provides a graphical representation of how expenses have changed or fluctuated over a specific period. This helps users track their spending patterns and identify trends."
+        },
+        {
+          "title": "Doughnut Chart",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842159/md/expense_tracker/doughnut%20chart.png",
+          "description": "The Doughnut Chart provides a clear and concise breakdown of the user's expenses by category. It visualizes the proportion of expenses allocated to different categories using a circular chart with segments. This allows users to quickly understand their expense distribution and identify which categories consume the most of their budget."
+        },
+        {
+          "title": "Most Recent Expenses",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842159/md/expense_tracker/recent%20dashboard.png",
+          "description": "Display the 10 most recent expenses."
+        }
+      ]
+    },
+    {
+      "title": "Expense Page",
+      "items": [
+        {
+          "title": "View Expense",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842158/md/expense_tracker/Expense%20List.png",
+          "description": "Users can easily view their expenses, budgets, and categories in a clear and organized manner."
+        },
+        {
+          "title": "Search/Filter",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842158/md/expense_tracker/filter%202%20expense.png",
+          "description": "Users can quickly search for specific expenses, budgets, or categories by using search functionality."
+        },
+        {
+          "title": "Add New Expense",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842160/md/expense_tracker/add%20expense.png",
+          "description": "Users can effortlessly add new expenses to keep track of their financial transactions."
+        },
+        {
+          "title": "Update/Edit Expense",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842159/md/expense_tracker/update%20expense.png",
+          "description": "Users can easily modify and update expense details, ensuring accurate records."
+        },
+        {
+          "title": "Delete Existing Expense",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686842160/md/expense_tracker/delete%20expense.png",
+          "description": "Users have the ability to delete any unwanted or no longer relevant expenses."
+        }
+      ]
+    },
+    {
+      "title": "Budget Page",
+      "items": [
+        {
+          "title": "View Budget",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686843531/md/expense_tracker/budget%20list.png",
+          "description": "Users can see a list of their budgets."
+        },
+        {
+          "title": "Search/Filter",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686843530/md/expense_tracker/filter%20budgets.png",
+          "description": "Users can search for specific budgets using keywords or filters."
+        },
+        {
+          "title": "Budget Details",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686843531/md/expense_tracker/budget%20details.png",
+          "description": "View the full details of a budget."
+        },
+        {
+          "title": "Add new budgets",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686843531/md/expense_tracker/create%20budgets.png",
+          "description": "Users can create new budgets by providing the necessary details."
+        },
+        {
+          "title": "Update/edit budget details",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686843531/md/expense_tracker/update%20budgets.png",
+          "description": "Users can modify budget information such as name, amount."
+        },
+        {
+          "title": "Delete existing budgets",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686843971/md/expense_tracker/delete%20budget.png",
+          "description": "Users can remove budgets they no longer need."
+        },
+        {
+          "title": "View and remove budget expenses expenses",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686843531/md/expense_tracker/budget%20expense.png",
+          "description": "Users can view or remove the expenses associated with each budget."
+        }
+      ]
+    },
+    {
+      "title": "Category Page",
+      "items": [
+        {
+          "title": "View Category",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686844195/md/expense_tracker/Screen_Shot_2023-06-15_at_11.48.42_PM_z2km6k.png",
+          "description": "Users can easily view their existing expense categories."
+        },
+        {
+          "title": "Search/Filter",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686844196/md/expense_tracker/Screen_Shot_2023-06-15_at_11.48.49_PM_vgfbba.png",
+          "description": "Users can search for specific category using keywords or filters."
+        },
+        {
+          "title": "Budget Details",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686844196/md/expense_tracker/Screen_Shot_2023-06-15_at_11.48.57_PM_hmrkdk.png",
+          "description": "View the full details of a category."
+        },
+        {
+          "title": "Add new category",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686844196/md/expense_tracker/Screen_Shot_2023-06-15_at_11.48.53_PM_qejg6p.png",
+          "description": "Users have the ability to create new expense categories to organize their expenses."
+        },
+        {
+          "title": "Update/edit category details",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686844196/md/expense_tracker/Screen_Shot_2023-06-15_at_11.49.00_PM_gajgjn.png",
+          "description": "Users can modify and update category details, such as the name or description."
+        },
+        {
+          "title": "Delete existing category",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686844196/md/expense_tracker/Screen_Shot_2023-06-15_at_11.49.15_PM_wzgteu.png",
+          "description": "Users can remove category they no longer need."
+        },
+        {
+          "title": "View and remove category expenses expenses",
+          "image": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686844196/md/expense_tracker/Screen_Shot_2023-06-15_at_11.49.11_PM_j5amgz.png",
+          "description": "Users can view or remove the expenses associated with each category."
+        }
+      ]
+    }
+  ],
+  "responsive": "https://res.cloudinary.com/dkarsw8bs/image/upload/v1686846170/md/expense_tracker/Screen_Shot_2023-06-16_at_12.22.20_AM_osotog.png"
+}
