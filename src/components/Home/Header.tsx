@@ -3,9 +3,25 @@ import { useEffect, useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
-const Header = () => {
+type HeaderProps = {
+  activeSection:
+    | "hero"
+    | "about"
+    | "services"
+    | "skills"
+    | "projects"
+    | "contact";
+};
+const Header = ({ activeSection }: HeaderProps) => {
   const navs: string[] = ["About", "Services", "Skills", "Projects"];
+
+  const sectionColors: any = {
+    hero: "#7e5f92",
+    about: "#47926B",
+    services: "#44819E",
+    skills: "#AC4830",
+    projects: "gray",
+  };
   const variants = {
     open: {
       opacity: 1,
@@ -16,11 +32,11 @@ const Header = () => {
       x: "-50%",
     },
   };
+
   const [isOpenNav, setIsOpenNav] = useState(false);
   const toggleNav = () => {
     setIsOpenNav(!isOpenNav);
   };
-
   useEffect(() => {
     const handleScroll = () => {
       setIsOpenNav(false);
@@ -33,8 +49,25 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  console.log(activeSection);
   return (
-    <header>
+    <header className={`headerMain ${scroll ? "sticky" : ""}`}>
       <nav className="flex  items-center justify-between px-7 md:px-20 py-10 ">
         <Link to={"/"}>
           <motion.ul
@@ -51,13 +84,23 @@ const Header = () => {
           >
             <li>
               <IconWorld
-                className="stroke-green-500 cursor-pointer hover:scale-110 transition ease-in-out delay-150"
+                className={` cursor-pointer hover:scale-110  ease-in-out delay-150 transition-colors duration-500`}
                 stroke={1.5}
                 size={50}
+                style={{
+                  stroke: sectionColors[activeSection],
+                }}
               />
             </li>
-            <li className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-4xl font-bold cursor-pointer">
-              Sean<span className="text-green-500">.</span>
+            <li className="transition-colors ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-4xl font-bold cursor-pointer duration-500">
+              Sean
+              <span
+                style={{
+                  color: sectionColors[activeSection],
+                }}
+              >
+                .
+              </span>
             </li>
           </motion.ul>
         </Link>
@@ -75,18 +118,17 @@ const Header = () => {
           className="hidden md:flex  gap-3 font-semibold text-lg"
         >
           {navs?.map((nav, idx) => (
-            <li
+            <a
+              style={{
+                color: sectionColors[activeSection],
+              }}
+              href={`#${nav?.toLowerCase()}`}
               key={idx}
-              className="transition ease-in-out delay-150 hover:text-green-500 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+              className={` ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 cursor-pointer transition-colors duration-500 `}
             >
-              <a href={`#${nav?.toLowerCase()}`}>{nav}</a>
-            </li>
+              {nav}
+            </a>
           ))}
-          <li>
-            <button className="border-2 border-green-500 self-center px-3 shadow-lg transition ease-in delay-150 hover:scale-110  hover:text-white hover:bg-green-500">
-              <a href="#contacts">Contacts</a>
-            </button>
-          </li>
         </motion.ul>
         {/* mobile nav */}
         <div className="md:hidden">
@@ -105,7 +147,10 @@ const Header = () => {
         }}
         animate={isOpenNav ? "open" : "closed"}
         variants={variants}
-        className={`space-x-4 fixed w-full bg-green-500 p-4 rounded-lg shadow-lg flex`}
+        className={`space-x-4 fixed w-full  p-4 rounded-lg shadow-lg flex transition-colors duration-500`}
+        style={{
+          backgroundColor: sectionColors[activeSection],
+        }}
       >
         {navs?.map((nav, idx) => (
           <li

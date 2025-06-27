@@ -20,7 +20,7 @@ const LeftSide: React.FC<Props> = ({
   more,
 }) => {
   return (
-    <div className="flex-1 bg-gray-100 p-4 px-8 md:px-16 rounded-md">
+    <div className="flex-1  p-4 px-8 md:px-16 rounded-md">
       <div className="flex justify-between">
         <h1 className="font-semibold text-2xl mb-5 md:mb-10">{name}</h1>
 
@@ -36,11 +36,11 @@ const LeftSide: React.FC<Props> = ({
         <div className="flex flex-col">
           <h1 className="text-gray-900 font-semibold text-lg">Tools</h1>
           <div className="flex flex-wrap gap-1">
-            {techStack.map((tech) => {
+            {techStack.map((tech: any, idx: number) => {
               const IconComponent = iconMap[tech];
               return (
                 IconComponent && (
-                  <IconComponent className="mr-2 text-xl w-7 h-7" />
+                  <IconComponent key={idx} className="mr-2 text-xl w-7 h-7" />
                 )
               );
             })}

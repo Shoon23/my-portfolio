@@ -5,8 +5,11 @@ import {
 } from "@tabler/icons-react";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-
-const Services = () => {
+import "./home.css";
+type ServicesProps = {
+  sectionRef: React.RefObject<HTMLElement>;
+};
+const Services = ({ sectionRef }: ServicesProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 
@@ -14,6 +17,7 @@ const Services = () => {
     <section
       id="services"
       className="min-h-screen flex items-center justify-center"
+      ref={sectionRef}
     >
       <div ref={ref} className="max-w-7xl mx-auto px-5 py-10 md:px-10 md:py-20">
         <motion.h1
@@ -31,7 +35,7 @@ const Services = () => {
             delay: 0.4,
             ease: "easeInOut",
           }}
-          className=" text-4xl font-bold text-green-500"
+          className="text-4xl font-bold text-[#44819E]"
         >
           Services
         </motion.h1>
@@ -52,10 +56,10 @@ const Services = () => {
               delay: 0.6,
               ease: "easeInOut",
             }}
-            className="flex-1"
+            className="flex-1 service-card"
           >
             <IconDeviceDesktopCode
-              className="mb-1 stroke-green-500"
+              className="mb-1 stroke-[#44819E]"
               size={45}
             />
             <motion.h1
@@ -115,10 +119,10 @@ const Services = () => {
               delay: 0.8,
               ease: "easeInOut",
             }}
-            className=" flex-1"
+            className=" flex-1 service-card"
           >
             <IconBrandReact
-              className="mb-1 stroke-blue-500"
+              className="mb-1 stroke-[#44819E]"
               size={45}
               stroke={1.5}
             />
@@ -178,9 +182,9 @@ const Services = () => {
               delay: 1,
               ease: "easeInOut",
             }}
-            className="flex-1 mt-3 md:mt-0"
+            className="flex-1 mt-3 md:mt-0 service-card"
           >
-            <IconLayersIntersect className="mb-1  stroke-green-500" size={45} />
+            <IconLayersIntersect className="mb-1  stroke-[#44819E]" size={45} />
             <motion.h1
               animate={
                 inView && {

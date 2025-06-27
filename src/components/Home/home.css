@@ -1,0 +1,95 @@
+.contact-btn {
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 0px #7e5f92;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+  width: 50%;
+  font-size: 1.3;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.contact-btn:active {
+  transform: translateY(8px);
+  box-shadow: none;
+  background: #7e5f92;
+  color: white;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation: fadeInDown 0.7s ease-out;
+  z-index: 1000;
+  background: white; /* Optional */
+  height: 100%;
+}
+
+.about-card {
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 0px #47926b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+  width: 100%;
+  font-size: 1.3;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+
+.service-card {
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 0px #44819e;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+  /* width: 100%; */
+  font-size: 1.3;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+.skill-card {
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 0px #ac4830;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+  /* width: 100%; */
+  font-size: 1.3;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+
+.project-card {
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 0px gray;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+  /* width: 100%; */
+  font-size: 1.3;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: 10px;
+}

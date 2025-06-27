@@ -6,11 +6,11 @@ interface Props {
 
 const RightSide: React.FC<Props> = ({ img }) => {
   return (
-    <div className="flex-1">
+    <div className="flex-1 min-h-[200px] md:min-h-[300px]">
       <img
         src={img}
-        alt="Image"
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        alt="Project screenshot"
+        className="w-full h-full object-cover rounded-md"
       />
     </div>
   );

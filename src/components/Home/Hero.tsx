@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import "./home.css";
 
-const Hero = () => {
+type HeroProps = {
+  sectionRef: React.RefObject<HTMLElement>;
+};
+
+const Hero = ({ sectionRef }: HeroProps) => {
   return (
-    <section id="hero" className="min-h-[95vh] ">
+    <section ref={sectionRef} id="hero" className="min-h-[95vh] ">
       <div className="flex px-7 pt-20">
         <div className="w-1/2 flex flex-col  justify-center pl-12 gap-2">
           <motion.h1
@@ -31,7 +36,7 @@ const Hero = () => {
                 delay: 0.5,
                 ease: "easeInOut",
               }}
-              className="text-green-500"
+              className="text-[#7e5f92]"
             >
               Sean Wilfred Custodio
             </motion.span>
@@ -51,8 +56,8 @@ const Hero = () => {
           >
             Full-Stack Web Developer
           </motion.h1>
-
-          <motion.button
+          <motion.a
+            href="#contacts"
             animate={{
               opacity: 1,
             }}
@@ -63,10 +68,11 @@ const Hero = () => {
               delay: 0.9,
               ease: "easeInOut",
             }}
-            className="mt-4 font-semibold border-2 border-green-500 self-center px-3 py-1 md:px-5 md:py-2 shadow-lg transition ease-in delay-150 hover:scale-110  hover:text-white hover:bg-green-500"
+            className="contact-btn text-[.6rem] md:text-lg"
+            // className="font-semibold border-2 border-green-500 self-center px-3 py-1 md:px-5 md:py-2 shadow-lg transition ease-in delay-150 hover:scale-110  hover:text-white hover:bg-green-500"
           >
-            <a href="#contacts">Contact Me</a>
-          </motion.button>
+            Contact Me
+          </motion.a>
           <div className="flex items-center flex-wrap gap-4">
             <motion.a
               animate={{
@@ -120,7 +126,7 @@ const Hero = () => {
             >
               <FaLinkedin size={24} />
             </motion.a>
-            <motion.a
+            {/* <motion.a
               animate={{
                 opacity: 1,
               }}
@@ -136,7 +142,7 @@ const Hero = () => {
               rel="noopener noreferrer"
             >
               <img src="/fiverr3.png" alt="Fiverr" width={24} height={24} />
-            </motion.a>
+            </motion.a> */}
           </div>
         </div>
         <motion.div
